@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo -n "Enter source file name : "
+read src
+echo -n "Enter target file name : "
+read targ
+
+if [ ! -f $src ]
+then
+    echo "File $src does not exist"
+    exit 1
+elif [ -f $targ ]
+then
+    echo "File $targ exist, cannot ovewrite"
+    exit 2
+fi
+
+cp $src $targ
+
+#show status to determine whether the operation has been successful or not
+
+status=#?
+
+if [ $status -eq 0 ]
+then
+    echo 'Successfull'
+else
+    echo 'Error'
+fi
