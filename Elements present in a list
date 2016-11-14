@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+use strict;
+
+my %elements;
+my $element = "Toast";
+
+#Creating the list from which the elemts will be sought
+
+foreach ("Pork","Brawn","Cheese","Bacon","Steak","Ham","Sandwich",
+	"Toast","Cereal") {
+ $elements{$_} = 1;
+ };
+
+ #check if the $element is in the list of items
+ 
+ print " Found:: '$element'\n" if (exists $elements{$element});
+ print " ' oh - '$element' not found\n" unless (exists $elements{$element});
+
+  foreach (keys %elements) { 
+      print "$_\n";
+    };
