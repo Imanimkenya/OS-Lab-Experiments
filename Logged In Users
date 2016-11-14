@@ -1,0 +1,6 @@
+echo "To Display Current Users Logged In The System"
+
+id -u -n
+
+echo "Users Currently logged in are: "
+id -u -n
