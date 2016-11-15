@@ -1,1 +1,1 @@
-grep "Business" awk.txt
+grep "Business" school.txt
